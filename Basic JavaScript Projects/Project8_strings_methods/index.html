@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="JS/main.js"></script>
+</head>
+
+<body>
+
+  <!-- Concatenate -->
+<p id="Concatenate"></p>
+<button onclick="full_Sentence()">Click here for a sentence.</button>
+
+
+<!--Slice method-->
+<p id="Slice"></p>
+<button onclick="slice_Method()">Click here</button>
+
+
+<!--upper method-->
+<p id="Upper"></p>
+<button onclick="upper_Method()">Shae is pretty.</button>
+
+
+<!--search method-->
+<p id="Search"></p>
+
+<script>
+  let text = "Shae has a lot of work to do."
+  let position = text.search("work");
+
+  document.getElementById("Search").innerHTML = position;
+</script>
+
+<!-- tostring method-->
+<p id="Numbers_to_string"></p>
+<button onclick="string_Method()">Click here</button>
+
+<!-- toPrecision method-->
+<p id="Precision"></p>
+<button onclick="precision_Method()">Click here.</button>
+
+<!-- toFixed method-->
+<p id="toFixed"></p>
+
+<script>
+let num = 9.68704844;
+let n = num.toFixed();
+
+document.getElementById("toFixed").innerHTML = n;
+</script>
+
+
+<!-- valueof method-->
+<p id="Valueof"></p>
+
+<script>
+let text_1 = "Nice to meet you.";
+let result = text_1.valueOf();
+
+document.getElementById("Valueof").innerHTML = result;
+</script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
