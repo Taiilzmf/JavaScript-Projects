@@ -21,7 +21,7 @@ function placeXOrO(squareNumber) {
   }
 
   //plays music//
-  Audio('./media/place.mp3');
+  audio('./media/place.mp3');
   //condition checks to see if its computers turn.
   if(activePlayer === 'O') {
     disableClick();
@@ -64,7 +64,7 @@ function checkWinCondition() {
   else if (arrayIncludes('6O', '4O', '2O')) {drawWinLine(100, 508, 510, 90) }
   else if (arrayIncludes('0O', '4O', '8O')) {drawWinLine(100, 100, 520, 520) }
   else if (selectedSquares.length >= 9) {
-    Audio('./media/tie.mp3');
+    audio('./media/tie.mp3');
     setTimeout(function () { resetGame();}, 1000);
   }
 
@@ -111,6 +111,11 @@ function animateLineDrawing() {
     if (x < x2) {x += 10; }
     if (y < y2) {y += 10; }
     if (x >= x2 && y >= y2) {cancelAnimationFrame(animationLoop); }
+  }
+  if (x1 <= x2 && y1 >= y2) {
+    if (x < x2) { x += 10; }
+    if (y > y2) { y -= 10;}
+    if (x >= x2 && y <= y2) { cancelAnimationFrame(animationLoop); }
   }
 }
 
